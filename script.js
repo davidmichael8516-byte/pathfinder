@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
     forms.forEach(form => {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            // In a real app, you would validate and submit the form here
             alert('Form submitted! (This is a demo)');
         });
     });
@@ -51,7 +50,6 @@ function loadNewContent() {
     const contentArea = document.getElementById('knowledge-content');
     if (contentArea) {
         contentArea.innerHTML = '<p>Loading new knowledge content...</p>';
-        // In a real app, this would fetch from an API
         setTimeout(() => {
             contentArea.innerHTML = `
                 <h3>New Knowledge Article</h3>
@@ -60,3 +58,41 @@ function loadNewContent() {
         }, 1000);
     }
 }
+
+// ----------------------
+// HADITH API INTEGRATION
+// ----------------------
+const HADITH_API_KEY = "YOUR_API_KEY_HERE"; // Replace with your actual key
+const HADITH_API_URL = "https://hadithapi.com/api/hadiths/random";
+
+async function loadRandomHadith() {
+    const hadithContainer = document.getElementById('hadith-container');
+    if (!hadithContainer) return;
+
+    hadithContainer.innerHTML = "<p>Loading Hadith...</p>";
+
+    try {
+        const response = await fetch(HADITH_API_URL, {
+            headers: {
+                "Authorization": `Bearer ${HADITH_API_KEY}`
+            }
+        });
+        const data = await response.json();
+
+        if (data && data.hadith && data.hadith.hadithEnglish) {
+            hadithContainer.innerHTML = `
+                <h3>Hadith of the Day</h3>
+                <p>${data.hadith.hadithEnglish}</p>
+                <small>Source: ${data.hadith.book.bookName}</small>
+            `;
+        } else {
+            hadithContainer.innerHTML = "<p>Could not load Hadith. Try again later.</p>";
+        }
+    } catch (error) {
+        console.error("Error fetching Hadith:", error);
+        hadithContainer.innerHTML = "<p>Error loading Hadith.</p>";
+    }
+}
+
+// Load hadith automatically when page loads
+document.addEventListener('DOMContentLoaded', loadRandomHadith);
