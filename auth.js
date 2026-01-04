@@ -1,6 +1,6 @@
 // auth.js
-const SUPABASE_URL = "https://YOUR_PROJECT_ID.supabase.co";
-const SUPABASE_ANON_KEY = "YOUR_PUBLIC_ANON_KEY";
+const SUPABASE_URL = "https://qmbykqsaqxmlhpoyjrks.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_v4NnwDj4S8DWNntDhnLAjw_aRgEkI9s";
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const loginForm = document.getElementById("login-form");
