@@ -125,7 +125,7 @@ const QURAN_API_URL = "https://api.alquran.cloud/v1/ayah/random";
 
 // Hadith API (HadithAPI.com)
 const HADITH_API_URL = "https://hadithapi.com/api/hadiths/random";
-const HADITH_API_KEY = "YOUR_API_KEY_HERE"; // Replace with your actual key or use environment variable
+const HADITH_API_KEY = process.env.HADITH_API_KEY; // Replace with your actual key or use environment variable
 
 async function loadQuranAndHadith() {
   const quranDiv = document.getElementById("quran-verse");
