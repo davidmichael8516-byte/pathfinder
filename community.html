@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Rooms - Pathfinder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="bg-amber-50 font-sans">
+    <!-- Header Component -->
+    <script src="components/header.js"></script>
+    <custom-header></custom-header>
+
+    <!-- Community Hero -->
+    <section class="py-16 px-4 md:px-8 bg-gradient-to-r from-red-800 to-red-900 text-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-3xl md:text-4xl font-playfair font-bold mb-4">Community Rooms</h1>
+            <p class="text-xl max-w-3xl mx-auto">Connect with fellow reverts in gender-specific spaces designed for support and growth</p>
+        </div>
+    </section>
+
+    <!-- Community Content -->
+    <section class="py-16 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Brothers Room -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="bg-blue-800 py-6 px-8">
+                        <h2 class="text-2xl font-playfair font-bold text-white">Brothers' Room</h2>
+                        <p class="text-blue-100 mt-2">A space for male reverts to connect, share experiences, and build brotherhood</p>
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i data-feather="users" class="text-blue-800 w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Active Members</h3>
+                                <p class="text-gray-600">42 brothers currently online</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-4">Recent Discussions</h3>
+                            <div class="space-y-4">
+                                <div class="border-b border-gray-100 pb-4">
+                                    <h4 class="font-medium text-gray-900">Balancing Work & Prayer Times</h4>
+                                    <p class="text-sm text-gray-600 mt-1">Started by Muhammad A. • 15 replies</p>
+                                </div>
+                                
+                                <div class="border-b border-gray-100 pb-4">
+                                    <h4 class="font-medium text-gray-900">Learning Arabic for Quran Reading</h4>
+                                    <p class="text-sm text-gray-600 mt-1">Started by Omar K. • 8 replies</p>
+                                </div>
+                                
+                                <div class="border-b border-gray-100 pb-4">
+                                    <h4 class="font-medium text-gray-900">Growing Beard in Professional Environments</h4>
+                                    <p class="text-sm text-gray-600 mt-1">Started by Yusuf R. • 22 replies</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="block w-full bg-blue-800 hover:bg-blue-900 text-white text-center py-3 px-4 rounded-lg transition duration-300">Enter Brothers' Room</a>
+                    </div>
+                </div>
+                
+                <!-- Sisters Room -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="bg-pink-800 py-6 px-8">
+                        <h2 class="text-2xl font-playfair font-bold text-white">Sisters' Room</h2>
+                        <p class="text-pink-100 mt-2">A safe space for female reverts to share experiences and support one another</p>
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-pink-100 p-3 rounded-full mr-4">
+                                <i data-feather="users" class="text-pink-800 w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Active Members</h3>
+                                <p class="text-gray-600">38 sisters currently online</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-4">Recent Discussions</h3>
+                            <div class="space-y-4">
+                                <div class="border-b border-gray-100 pb-4">
+                                    <h4 class="font-medium text-gray-900">Hijab Styles for Different Face Shapes</h4>
+                                    <p class="text-sm text-gray-600 mt-1">Started by Fatima S. • 24 replies</p>
+                                </div>
+                                
+                                <div class="border-b border-gray-100 pb-4">
+                                    <h4 class="font-medium text-gray-900">Balancing Family Expectations After Reverting</h4>
+                                    <p class="text-sm text-gray-600 mt-1">Started by Aisha M. • 17 replies</p>
+                                </div>
+                                
+                                <div class="border-b border-gray-100 pb-4">
+                                    <h4 class="font-medium text-gray-900">Finding Halal Cosmetics & Skincare</h4>
+                                    <p class="text-sm text-gray-600 mt-1">Started by Zainab K. • 12 replies</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="block w-full bg-pink-800 hover:bg-pink-900 text-white text-center py-3 px-4 rounded-lg transition duration-300">Enter Sisters' Room</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Motivational Quotes Section -->
+            <div class="mt-16">
+                <h2 class="text-2xl font-playfair font-bold text-red-900 mb-8 text-center">Inspiration from Our Community</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <div class="text-red-800 mb-4">
+                            <i data-feather="heart" class="w-8 h-8"></i>
+                        </div>
+                        <p class="text-gray-700 italic mb-4">"Islam isn't about perfection; it's about progress. Every step you take towards your Creator is valued."</p>
+                        <p class="text-sm text-gray-600">- Khadija R., Revert for 3 years</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <div class="text-red-800 mb-4">
+                            <i data-feather="sun" class="w-8 h-8"></i>
+                        </div>
+                        <p class="text-gray-700 italic mb-4">"The beauty of being a revert is that every day brings new discoveries about our faith. Embrace the journey!"</p>
+                        <p class="text-sm text-gray-600">- Amara T., Revert for 1 year</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <div class="text-red-800 mb-4">
+                            <i data-feather="star" class="w-8 h-8"></i>
+                        </div>
+                        <p class="text-gray-700 italic mb-4">"You are not alone in this journey. We are a family, and every member matters in building each other up."</p>
+                        <p class="text-sm text-gray-600">- Yusuf H., Revert for 4 years</p>
+                    </div>
+                </div>
+                
+                <div class="mt-10 text-center">
+                    <a href="#" class="inline-flex items-center bg-red-800 hover:bg-red-900 text-white font-medium py-3 px-6 rounded-lg transition duration-300">
+                        Share Your Inspiration
+                        <i data-feather="edit-3" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <script src="components/footer.js"></script>
+    <custom-footer></custom-footer>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

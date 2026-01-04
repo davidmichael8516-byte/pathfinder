@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quran Explorer - Pathfinder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="bg-amber-50 font-sans">
+    <!-- Header Component -->
+    <script src="components/header.js"></script>
+    <custom-header></custom-header>
+
+    <!-- Quran Hero -->
+    <section class="py-16 px-4 md:px-8 bg-gradient-to-r from-green-800 to-green-900 text-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-3xl md:text-4xl font-playfair font-bold mb-4">Quran Explorer</h1>
+            <p class="text-xl max-w-3xl mx-auto">Discover the divine words of Allah with translations and recitations</p>
+        </div>
+    </section>
+
+    <!-- Quran Content -->
+    <section class="py-16 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Surah List -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-xl shadow-md p-6 sticky top-24">
+                        <h2 class="text-xl font-playfair font-bold text-green-900 mb-4">Surahs</h2>
+                        <div class="space-y-2 max-h-[600px] overflow-y-auto" id="surah-list">
+                            <!-- Surahs will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Verse Display -->
+                <div class="lg:col-span-3">
+                    <div class="bg-white rounded-xl shadow-md p-8">
+                        <div class="text-center mb-10" id="surah-info">
+                            <h2 class="text-2xl font-playfair font-bold text-green-900 mb-2">Select a Surah</h2>
+                            <p class="text-gray-600">Choose a chapter from the Quran to explore its verses</p>
+                        </div>
+                        
+                        <div id="verse-container">
+                            <!-- Verses will be populated by JavaScript -->
+                        </div>
+                        
+                        <div class="flex justify-between items-center mt-10">
+                            <button id="prev-btn" class="bg-green-800 hover:bg-green-900 text-white py-2 px-6 rounded-lg transition duration-300 hidden">
+                                Previous
+                            </button>
+                            <button id="next-btn" class="bg-green-800 hover:bg-green-900 text-white py-2 px-6 rounded-lg transition duration-300 hidden">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <script src="components/footer.js"></script>
+    <custom-footer></custom-footer>
+
+    <script>
+        feather.replace();
+    </script>
+    <script src="quran.js"></script>
+</body>
+</html>
